@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "paths": {
+    "/products": {
+      "name": "/products",
+      "lambdaFunction": "amplifydemof632e5f2",
+      "permissions": {
+        "setting": "open"
+      }
+    },
+    "/register": {
+      "name": "/register",
+      "lambdaFunction": "amplifydemof632e5f2",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "resourceName": "dynamo65e6bf58",
+  "tableName": "testamplifytable",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "string"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
