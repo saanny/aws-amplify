@@ -13,9 +13,9 @@
     },
     "categories": {
       "function": {
-        "amplifydemof632e5f2": {
+        "functionV1": {
           "deploymentBucketName": "amplify-amplifydemo-dev-221624-deployment",
-          "s3Key": "amplify-builds/amplifydemof632e5f2-47763456704737366d53-build.zip"
+          "s3Key": "amplify-builds/functionV1-4b673576777179435750-build.zip"
         }
       },
       "api": {

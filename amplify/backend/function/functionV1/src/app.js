@@ -1,16 +1,10 @@
-/* Amplify Params - DO NOT EDIT
-	ENV
-	REGION
-Amplify Params - DO NOT EDIT *//*
+/*
 Copyright 2017 - 2017 Amazon.com, Inc. or its affiliates. All Rights Reserved.
 Licensed under the Apache License, Version 2.0 (the "License"). You may not use this file except in compliance with the License. A copy of the License is located at
     http://aws.amazon.com/apache2.0/
 or in the "license" file accompanying this file. This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
 */
-
-
-
 
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -125,7 +119,7 @@ const authenticated = async (req,res,next) => {
 }
 
 // User
-app.post('/confirm', async function(req, res) {
+app.post('/v1/confirm', async function(req, res) {
   const {confirmationCode,email} = req.body
 
   try {
@@ -151,7 +145,7 @@ app.post('/confirm', async function(req, res) {
 })
 
 
-app.post('/register', async function(req, res) {
+app.post('/v1/register', async function(req, res) {
   const {name,email,password} = req.body
   try {
     const attributesList = []
@@ -175,7 +169,7 @@ app.post('/register', async function(req, res) {
 
 })
 
-app.post('/login', async function(req, res) {
+app.post('/v1/login', async function(req, res) {
   const {email,password} = req.body
   try {
     const result = await login({email,password})
@@ -188,7 +182,7 @@ app.post('/login', async function(req, res) {
 
 })
 
-app.get('/products',authenticated, async function(req, res) {
+app.get('/v1/products',authenticated, async function(req, res) {
   const params = {
     TableName: PRODUCT_TABLE,
     IndexName: "UserIdIndex",
@@ -213,7 +207,7 @@ app.get('/products',authenticated, async function(req, res) {
 });
 
 
-app.post('/products',authenticated, async function(req, res) {
+app.post('/v1/products',authenticated, async function(req, res) {
 
   const { name, detail } = req.body;
   try {
@@ -252,7 +246,7 @@ app.post('/products',authenticated, async function(req, res) {
 });
 
 
-app.patch('/products/:id',authenticated, async function(req, res) {
+app.patch('/v1/products/:id',authenticated, async function(req, res) {
 try {
   const {name,detail} = req.body
   const {id} = req.params;
@@ -287,7 +281,7 @@ try {
 
 
 
-app.delete('/products/:id', async function(req, res) {
+app.delete('/v1/products/:id', async function(req, res) {
   try {
     const {id} = req.params;
 

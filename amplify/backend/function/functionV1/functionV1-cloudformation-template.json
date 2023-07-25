@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "amplifydemof632e5f2",
+            "functionV1",
             {
               "Fn::Join": [
                 "",
                 [
-                  "amplifydemof632e5f2",
+                  "functionV1",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "amplifydemoLambdaRole1f7153f0",
+            "amplifydemoLambdaRolefa2e4892",
             {
               "Fn::Join": [
                 "",
                 [
-                  "amplifydemoLambdaRole1f7153f0",
+                  "amplifydemoLambdaRolefa2e4892",
                   "-",
                   {
                     "Ref": "env"
